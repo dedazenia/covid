@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src='https://unpkg.com/nimiq-widget@1/dist/nimiqwidget.js'></script>
 </head>
 
 <body>
@@ -18,7 +17,8 @@
 
 <div class="col-sm-8">
     <!--<div class="container-fluid">-->
-    <h2>Confirmed Cases by location</h2>
+    <h2>Confirmed Cases by location <b th:text="${#dates.format(#execInfo.now.time, 'dd MMM yyyy')}"></b></h2>
+
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -41,7 +41,6 @@
     </div>
 </div>
 
-<nimiq-widget address="NQ39 23F7 NX8P SXVM 0H53 1UT0 2EMQ M3S5 U0J2"></nimiq-widget>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

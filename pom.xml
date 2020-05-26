@@ -11,8 +11,9 @@
 	<groupId>ru.gorobets24</groupId>
 	<artifactId>covid</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>covid</name>
-	<description>Demo project for Spring Boot</description>
+	<description>COVID-19 TABLE</description>
 
 	<properties>
 		<java.version>12</java.version>
