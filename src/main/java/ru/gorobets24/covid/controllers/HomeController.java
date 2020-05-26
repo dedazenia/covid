@@ -1,21 +1,21 @@
 package ru.gorobets24.covid.controllers;
 
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import ru.gorobets24.covid.services.CovidDataService;
 
 @Controller
 public class HomeController {
 
-   @RequestMapping("/")
-    public String home(){
+    @Autowired
+    CovidDataService covidDataService;
+
+    @GetMapping("/")
+    public String home(Model model) {
+        model.addAttribute("LocationCases", covidDataService.getAllStats());
         return "home";
     }
-    @GetMapping("/1")
-    public ResponseEntity<String> one(){
-        return ResponseEntity.ok("works");
-    }
-
 }
 

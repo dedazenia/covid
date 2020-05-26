@@ -21,7 +21,7 @@ public class LocationCases {
         this.country = country;
     }
 
-    public int getLatestCasesTotal(int i) {
+    public int getLatestCasesTotal() {
         return latestCasesTotal;
     }
 
