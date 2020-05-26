@@ -35,7 +35,6 @@ public class CovidDataService {
                 .uri(URI.create(COVID_DATA_URL))
                 .build();
         HttpResponse<String> httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(httpResponse.body());
 
         StringReader csvReader = new StringReader(httpResponse.body());
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvReader);
@@ -44,7 +43,7 @@ public class CovidDataService {
             locationCase.setState(record.get("Province/State"));
             locationCase.setCountry(record.get("Country/Region"));
             locationCase.setLatestCasesTotal(Integer.parseInt(record.get(record.size() - 1)));
-            System.out.println(locationCase);
+            locationCase.setNewLocalCases((Integer.parseInt(record.get(record.size() - 1))) -(Integer.parseInt(record.get(record.size() - 2))));
             newStats.add(locationCase);
         }
         this.allStats = newStats;

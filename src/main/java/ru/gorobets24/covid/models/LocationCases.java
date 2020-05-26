@@ -4,6 +4,15 @@ public class LocationCases {
     private String state;
     private String country;
     private int latestCasesTotal;
+    private int newLocalCases;
+
+    public int getNewLocalCases() {
+        return newLocalCases;
+    }
+
+    public void setNewLocalCases(int newLocalCases) {
+        this.newLocalCases = newLocalCases;
+    }
 
     public String getState() {
         return state;
