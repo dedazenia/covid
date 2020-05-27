@@ -1,0 +1,15 @@
+Error: /Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib: dlopen(/Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib, 1): no suitable image found.  Did find:
+	/Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib: code signature in (/Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib) not valid for use in process using Library Validation: mapped file has no cdhash, completely unsigned? Code has to be at least ad-hoc signed.
+java.lang.UnsatisfiedLinkError: /Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib: dlopen(/Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib, 1): no suitable image found.  Did find:
+	/Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib: code signature in (/Users/evgenygorobets/.config/PVS-Studio-Java/7.07.38241/native/mac/libanalysis-core.dylib) not valid for use in process using Library Validation: mapped file has no cdhash, completely unsigned? Code has to be at least ad-hoc signed.
+	at java.base/java.lang.ClassLoader$NativeLibrary.load0(Native Method)
+	at java.base/java.lang.ClassLoader$NativeLibrary.load(ClassLoader.java:2430)
+	at java.base/java.lang.ClassLoader$NativeLibrary.loadLibrary(ClassLoader.java:2487)
+	at java.base/java.lang.ClassLoader.loadLibrary0(ClassLoader.java:2684)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2617)
+	at java.base/java.lang.Runtime.load0(Runtime.java:765)
+	at java.base/java.lang.System.load(System.java:1866)
+	at com.pvsstudio.runner.NativeLoader.run(NativeLoader.java:75)
+	at com.pvsstudio.runner.NativeLoader.load(NativeLoader.java:83)
+	at com.pvsstudio.Main.main(Main.java:391)
+Analysis finished in 00:00:00.363.
